@@ -1,0 +1,8 @@
+# Python
+*__init__.py
+*__pycache__
+
+# IDE
+.vscode
+.idea
+
