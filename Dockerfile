@@ -4,7 +4,9 @@ FROM python:3.7-alpine AS python-image
 FROM python-image AS base
 
 ENV PYTHONUNBUFFERED 1
-RUN apk add --no-cache --update --virtual=deps python3-dev libevent-dev
+RUN apk add --no-cache --update postgresql-client
+RUN apk add --no-cache --update --virtual=deps python3-dev libevent-dev \
+    gcc libc-dev linux-headers postgresql-dev
 RUN pip install pipenv
 RUN mkdir /app
 ADD Pipfile* ./
