@@ -5,3 +5,4 @@ exclude =
     __init__.py,
     manage.py,
     settings.py
+ignore = W293
